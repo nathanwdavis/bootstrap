@@ -20,14 +20,14 @@
 
 // Accent colors
 // -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
-@green:                 #46a546;
-@red:                   #9d261d;
-@yellow:                #ffc40d;
-@orange:                #f89406;
-@pink:                  #c3325f;
-@purple:                #7a43b6;
+@blue:                  #3F3073;
+@blueDark:              #362D59;
+@green:                 #8ABF9C;
+@red:                   #F24B4B;
+@yellow:                #F2EDA7;
+@orange:                #F26A55;
+@pink:                  #F28080;
+@purple:                #362D59;
 
 
 // Scaffolding
@@ -38,14 +38,14 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
-@linkColorHover:        darken(@linkColor, 15%);
+@linkColor:             lighten(@blue, 15%);
+@linkColorHover:        @blueDark;
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@sansFontFamily:        "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+@serifFontFamily:       "Cantata One", Georgia, "Times New Roman", serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;
@@ -53,7 +53,7 @@
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontFamily:    @altFontFamily; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
@@ -70,9 +70,9 @@
 @paddingSmall:          2px 10px;  // 26px
 @paddingMini:           0 6px;   // 22px
 
-@baseBorderRadius:      4px;
-@borderRadiusLarge:     6px;
-@borderRadiusSmall:     3px;
+@baseBorderRadius:      3px;
+@borderRadiusLarge:     5px;
+@borderRadiusSmall:     2px;
 
 
 // Tables
@@ -88,20 +88,20 @@
 @btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         #bbb;
 
-@btnPrimaryBackground:              @linkColor;
+@btnPrimaryBackground:              @blue;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
 
-@btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
+@btnInfoBackground:                 lighten(@btnPrimaryBackground, 25%);
+@btnInfoBackgroundHighlight:        lighten(@btnPrimaryBackground, 10%);
 
-@btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
+@btnSuccessBackground:              darken(@green, 7%);
+@btnSuccessBackgroundHighlight:     darken(@green, 20%);
 
-@btnWarningBackground:              lighten(@orange, 15%);
-@btnWarningBackgroundHighlight:     @orange;
+@btnWarningBackground:              lighten(@orange, 20%);
+@btnWarningBackgroundHighlight:     lighten(@orange, 5%);
 
-@btnDangerBackground:               #ee5f5b;
-@btnDangerBackgroundHighlight:      #bd362f;
+@btnDangerBackground:               darken(@orange, 5%);
+@btnDangerBackgroundHighlight:      darken(@orange, 20%);
 
 @btnInverseBackground:              #444;
 @btnInverseBackgroundHighlight:     @grayDarker;
@@ -181,16 +181,16 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
+@navbarBackgroundHighlight:       lighten(desaturate(@green, 7%), 12%);
 @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
-@navbarText:                      #777;
-@navbarLinkColor:                 #777;
-@navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @gray;
+@navbarText:                      @grayDark;
+@navbarLinkColor:                 @grayDark;
+@navbarLinkColorHover:            @grayDarker;
+@navbarLinkColorActive:           darken(@grayDarker, 30%);
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+@navbarLinkBackgroundActive:      lighten(@navbarBackground, 5%);
 
 @navbarBrandColor:                @navbarLinkColor;
 
